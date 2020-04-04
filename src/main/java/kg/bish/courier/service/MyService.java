@@ -122,9 +122,11 @@ public class MyService {
     public long getLastContCourier(){
         SQLQuery sqlQuery = session.getCurrentSession().createSQLQuery("select * from CourierDB  order by id desc limit 1");
         List list = sqlQuery.list();
-        CourierDB courierDB =(CourierDB) list.get(0);
-        if(courierDB!=null){
-            return courierDB.getId();
+        if(list!=null){
+            if(list.size()!=0){
+                CourierDB courierDB =(CourierDB) list.get(0);
+                return courierDB.getId();
+            }
         }
         return 0;
     }
