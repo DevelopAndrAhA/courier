@@ -196,7 +196,7 @@ public class RegistrationController {
                     courierDB.setLogin(login);
                     courierDB.setPassword(password);
                     courierDB.setPhone(phone);
-                    courierDB.setStatusStr("NEW");
+                    courierDB.setStatusStr("COURIER");
                     courierDB.setPhoto(photoStrBuild.toString());
                     courierDB.setPhoto_p1(photoStrBuild_p1.toString());
                     courierDB.setPhoto_p2(photoStrBuild_p2.toString());

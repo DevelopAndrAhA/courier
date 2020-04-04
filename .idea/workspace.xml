@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a22b28fd-3e4d-44c3-a676-2b7aa224c874" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" afterPath="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a22b28fd-3e4d-44c3-a676-2b7aa224c874" name="Default" comment="" />
     <ignored path="KgBishCourier.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -754,12 +751,12 @@
       <workItem from="1585678804902" duration="992000" />
       <workItem from="1586015127889" duration="993000" />
       <workItem from="1586016316721" duration="402000" />
-      <workItem from="1586017121843" duration="90000" />
+      <workItem from="1586017121843" duration="278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134971000" />
+    <option name="totallyTimeSpent" value="135159000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
