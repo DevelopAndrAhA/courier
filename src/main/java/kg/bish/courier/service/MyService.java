@@ -257,7 +257,7 @@ public class MyService {
             criteria.setFirstResult(startId);
             criteria.setMaxResults(endId);
             adv_courier_tbs = criteria.list();
-            StringBuffer sql = new StringBuffer("SELECT * FROM AdvertisingDB A where id in (");
+            StringBuffer sql = new StringBuffer("SELECT * FROM AdvertisingDB A where A.adverst_id in (");
             for(int i = 0;i<adv_courier_tbs.size();i++){
                 sql.append(adv_courier_tbs.get(i).getAdv_id()+",");
             }
