@@ -16,6 +16,7 @@ public class AdvertisingDB {
     private double longitude;
     private double all_price;
     private long client_id;
+    private boolean statusDostavki;
 
     @OneToMany(mappedBy = "advertisingDB", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
     private List<Product> productses;
@@ -66,6 +67,14 @@ public class AdvertisingDB {
 
     public void setClient_id(long client_id) {
         this.client_id = client_id;
+    }
+
+    public boolean isStatusDostavki() {
+        return statusDostavki;
+    }
+
+    public void setStatusDostavki(boolean statusDostavki) {
+        this.statusDostavki = statusDostavki;
     }
 }
 

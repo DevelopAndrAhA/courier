@@ -219,6 +219,63 @@ public class AdvertisingController {
                 }
         return "{'adverst':false}";
     }
+    @ResponseBody
+    @RequestMapping(value = "get_all_my_adverst",method = RequestMethod.POST)
+    public Object get_all_my_adverst(@RequestBody UniverseJSON universeJSON) {
+        if(universeJSON.getStatusStr().equals("CLIENT")){
+            if(!universeJSON.getSecretKey().isEmpty()){
+                if(universeJSON.getCourierClientId()!=0){
+                    ClientDB clientDB = new ClientDB();
+                    clientDB.setId(universeJSON.getCourierClientId());
+                    clientDB.setSecretKey(universeJSON.getSecretKey());
+                    if(myService.verifySecretKey(clientDB)){
+                        List<AdverstOut>list =  myService. getAllMyAdverts("CLIENT",universeJSON.getCourierClientId(),universeJSON.getStartId(), universeJSON.getEndId());
+                        if(list!=null&&list.size()!=0){
+                            for(int i=0;i<list.size();i++){
+                                AdverstOut adverstOut = list.get(i);
+                                ClientDB clientDB1 =  adverstOut.getClientDB();
+                                clientDB = new ClientDB();
+                                clientDB.setAddress(clientDB1.getAddress());
+                                clientDB.setLatitude(clientDB1.getLatitude());
+                                clientDB.setLongitude(clientDB1.getLongitude());
+                                clientDB.setPhone(clientDB1.getPhone());
+                                adverstOut.setClientDB(clientDB);
+                            }
+                            return list;
+                        }else{
+                            return "{'adverst':CLIENT}";
+                        }
+
+                    }
+                }
+            }
+        }else{
+            CourierDB courierDB = new CourierDB();
+            courierDB.setId(universeJSON.getCourierClientId());
+            courierDB.setSecretKey(universeJSON.getSecretKey());
+            if(myService.verifySecretKey(courierDB)){
+                List<AdverstOut>list = myService. getAllMyAdverts("COURIER", universeJSON.getCourierClientId(), universeJSON.getStartId(), universeJSON.getEndId());
+                if(list!=null&&list.size()!=0){
+                    for(int i=0;i<list.size();i++){
+                        AdverstOut adverstOut = list.get(i);
+                        ClientDB clientDB1 =  adverstOut.getClientDB();
+                        ClientDB clientDB = new ClientDB();
+                        clientDB.setAddress(clientDB1.getAddress());
+                        clientDB.setLatitude(clientDB1.getLatitude());
+                        clientDB.setLongitude(clientDB1.getLongitude());
+                        clientDB.setPhone(clientDB1.getPhone());
+                        adverstOut.setClientDB(clientDB);
+                    }
+                    return list;
+                }else{
+                    return "{'adverst':COURIER}";
+                }
+
+            }
+        }
+        return "{'adverst':false}";
+    }
+
 
     @ResponseBody
     @RequestMapping(value = "get_adverst",method = RequestMethod.POST)

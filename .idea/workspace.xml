@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a22b28fd-3e4d-44c3-a676-2b7aa224c874" name="Default" comment="" />
+    <list default="true" id="a22b28fd-3e4d-44c3-a676-2b7aa224c874" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java" afterPath="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdvertisingDB.java" afterPath="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdvertisingDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" afterPath="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" />
+    </list>
     <ignored path="KgBishCourier.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,12 +67,12 @@
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/Save_adverst.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdverstOut.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdvertisingDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/Product.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdvertisingDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" />
       </list>
     </option>
@@ -114,8 +118,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,6 +332,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -752,11 +756,12 @@
       <workItem from="1586015127889" duration="993000" />
       <workItem from="1586016316721" duration="402000" />
       <workItem from="1586017121843" duration="278000" />
+      <workItem from="1586021987751" duration="1785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135159000" />
+    <option name="totallyTimeSpent" value="136944000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1065,20 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/ADV_COURIER_TB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03935185" vertical-offset="0" max-vertical-offset="864">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdvertisingDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84577113" vertical-offset="17" max-vertical-offset="952">
-          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/ClientDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10572139" vertical-offset="119" max-vertical-offset="1071">
@@ -1104,13 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5497512" vertical-offset="0" max-vertical-offset="804">
           <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4738806" vertical-offset="1404" max-vertical-offset="2346">
-          <caret line="167" column="74" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -1151,18 +1135,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1933" max-vertical-offset="3315">
+          <caret line="231" column="74" selection-start-line="231" selection-start-column="74" selection-end-line="231" selection-end-column="74" />
+          <folding>
+            <element signature="method#save_adverst#0;class#AdvertisingController#0" expanded="false" />
+            <element signature="method#get_all_adverst#0;class#AdvertisingController#0" expanded="false" />
+            <element signature="method#get_adverst#0;class#AdvertisingController#0" expanded="false" />
+            <element signature="method#createResizedCopy#0;class#AdvertisingController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5074627" vertical-offset="1462" max-vertical-offset="6137">
-          <caret line="122" column="149" selection-start-line="122" selection-start-column="149" selection-end-line="122" selection-end-column="149" />
+        <state vertical-scroll-proportion="0.65547264" vertical-offset="2414" max-vertical-offset="4896">
+          <caret line="251" column="105" selection-start-line="251" selection-start-column="105" selection-end-line="251" selection-end-column="105" />
           <folding>
-            <marker date="1586017211400" expanded="true" signature="-1:-1" placeholder="update Couri..." />
-            <marker date="1586017211400" expanded="true" signature="-1:-1" placeholder="update Clien..." />
-            <marker date="1586017211400" expanded="true" signature="-1:-1" placeholder="update Couri..." />
-            <marker date="1586017211400" expanded="true" signature="-1:-1" placeholder="update Clien..." />
-            <marker date="1586017211400" expanded="true" signature="-1:-1" placeholder="select * fro..CourierDB..." />
-            <marker date="1586017211400" expanded="true" signature="-1:-1" placeholder="select adv_i..ADV_COURIER_TB..." />
+            <element signature="method#verifyLOGIN#0;class#MyService#0" expanded="false" />
+            <element signature="method#verifyLOGIN#1;class#MyService#0" expanded="false" />
+            <element signature="method#getAllAdverts#0;class#MyService#0" expanded="false" />
+            <element signature="method#getAllMyAdverts#0;class#MyService#0" expanded="false" />
+            <element signature="method#getAdverts#0;class#MyService#0" expanded="false" />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="update Couri..." />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="update Clien..." />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="update Couri..." />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="update Clien..." />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="select * fro..CourierDB..." />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="select adv_i..ADV_COURIER_TB..." />
+            <marker date="1586023783919" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..AdvertisingDB..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/ADV_COURIER_TB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19029851" vertical-offset="0" max-vertical-offset="804">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kg/bish/courier/models_to_db/AdvertisingDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2960199" vertical-offset="0" max-vertical-offset="969">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

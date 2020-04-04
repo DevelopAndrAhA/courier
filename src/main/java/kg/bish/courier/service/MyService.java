@@ -249,6 +249,99 @@ public class MyService {
         }
         return null;
     }
+    public List<AdverstOut> getAllMyAdverts(String status_str,long courierClientId,int startId,int endId){
+        List<ADV_COURIER_TB> adv_courier_tbs = null;
+        if(status_str.equals("COURIER")){
+            Criteria criteria = session.getCurrentSession().createCriteria(ADV_COURIER_TB.class);
+            criteria.add(Restrictions.eq("courier_ID",courierClientId));
+            criteria.setFirstResult(startId);
+            criteria.setMaxResults(endId);
+            adv_courier_tbs = criteria.list();
+            StringBuffer sql = new StringBuffer("SELECT * FROM AdvertisingDB A where id in (");
+            for(int i = 0;i<adv_courier_tbs.size();i++){
+                sql.append(adv_courier_tbs.get(i).getAdv_id()+",");
+            }
+            sql.append("0);");
+
+            SQLQuery sqlQuery = session.getCurrentSession().createSQLQuery(sql.toString()).addEntity(AdvertisingDB.class);
+            List<AdvertisingDB> advertisingDBs = sqlQuery.list();
+            if(advertisingDBs!=null&&advertisingDBs.size()!=0){
+                List<AdverstOut> adverstOuts = new ArrayList<>();
+                for(int i =0;i<advertisingDBs.size();i++){
+                    AdvertisingDB advertisingDB  = new AdvertisingDB();
+                    List<Product> products = new ArrayList<>();
+                    AdvertisingDB tmpAdverst = (AdvertisingDB)advertisingDBs.get(i);
+                    List <Product> tmpProducts  = tmpAdverst.getProductses();
+                    for(int k =0;k<tmpProducts.size();k++){
+                        Product tmpProduct = tmpProducts.get(k);
+                        Product product = new Product();
+                        product.setId(tmpProduct.getId());
+                        product.setName(tmpProduct.getName());
+                        product.setPrice(tmpProduct.getPrice());
+                        product.setWeight(tmpProduct.getWeight());
+                        product.setCount(tmpProduct.getCount());
+                        products.add(product);
+                    }
+
+                    advertisingDB.setId(tmpAdverst.getId());
+                    advertisingDB.setProductses(products);
+                    advertisingDB.setLatitude(tmpAdverst.getLatitude());
+                    advertisingDB.setLongitude(tmpAdverst.getLongitude());
+                    advertisingDB.setAll_price(tmpAdverst.getAll_price());
+                    advertisingDB.setProductses(products);
+                    AdverstOut adverstOut = new AdverstOut();
+                    adverstOut.setAdvertisingDB(advertisingDB);
+                    Criteria criteria2 = session.getCurrentSession().createCriteria(ClientDB.class);
+                    criteria2.add(Restrictions.eq("id", tmpAdverst.getClient_id()));
+                    ClientDB clientDB = (ClientDB)criteria2.uniqueResult();
+                    adverstOut.setClientDB(clientDB);
+                    adverstOuts.add(adverstOut);
+                }
+                return adverstOuts;
+            }
+        }else {
+            List<AdverstOut> advertisingDBs = new ArrayList<>();
+            String sql = "SELECT * FROM AdvertisingDB a where a.client_id="+courierClientId+";";
+            SQLQuery sqlQuery = session.getCurrentSession().createSQLQuery(sql.toString()).addEntity(AdvertisingDB.class);
+            List list =  sqlQuery.list();
+            if(list!=null&&list.size()!=0){
+                for(int i =0;i<list.size();i++){
+                    AdvertisingDB advertisingDB  = new AdvertisingDB();
+                    List<Product> products = new ArrayList<>();
+                    AdvertisingDB tmpAdverst = (AdvertisingDB)list.get(i);
+                    List <Product> tmpProducts  = tmpAdverst.getProductses();
+                    for(int k =0;k<tmpProducts.size();k++){
+                        Product tmpProduct = tmpProducts.get(k);
+                        Product product = new Product();
+                        product.setId(tmpProduct.getId());
+                        product.setName(tmpProduct.getName());
+                        product.setPrice(tmpProduct.getPrice());
+                        product.setWeight(tmpProduct.getWeight());
+                        product.setCount(tmpProduct.getCount());
+                        products.add(product);
+                    }
+
+                    advertisingDB.setId(tmpAdverst.getId());
+                    advertisingDB.setProductses(products);
+                    advertisingDB.setLatitude(tmpAdverst.getLatitude());
+                    advertisingDB.setLongitude(tmpAdverst.getLongitude());
+                    advertisingDB.setAll_price(tmpAdverst.getAll_price());
+                    advertisingDB.setProductses(products);
+                    AdverstOut adverstOut = new AdverstOut();
+                    adverstOut.setAdvertisingDB(advertisingDB);
+                    Criteria criteria = session.getCurrentSession().createCriteria(ClientDB.class);
+                    criteria.add(Restrictions.eq("id", tmpAdverst.getClient_id()));
+                    ClientDB clientDB = (ClientDB)criteria.uniqueResult();
+                    adverstOut.setClientDB(clientDB);
+                    advertisingDBs.add(adverstOut);
+                }
+                return advertisingDBs;
+        }
+        }
+
+
+        return null;
+    }
     public AdvertisingDB getAdverts(long id){
     Criteria criteria = session.getCurrentSession().createCriteria(AdvertisingDB.class);
     criteria.add(Restrictions.eq("id",id));
