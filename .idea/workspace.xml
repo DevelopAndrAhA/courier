@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22b28fd-3e4d-44c3-a676-2b7aa224c874" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" afterPath="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="KgBishCourier.iws" />
@@ -72,6 +72,7 @@
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/AdvertisingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/controllers/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/bish/courier/service/MyService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -116,6 +117,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,7 +333,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -751,12 +752,13 @@
       <workItem from="1585674011902" duration="1114000" />
       <workItem from="1585678192282" duration="154000" />
       <workItem from="1585678804902" duration="992000" />
-      <workItem from="1586015127889" duration="803000" />
+      <workItem from="1586015127889" duration="993000" />
+      <workItem from="1586016316721" duration="144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134289000" />
+    <option name="totallyTimeSpent" value="134623000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -953,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="553">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7372176" vertical-offset="2151" max-vertical-offset="3196">
@@ -1111,7 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5497512" vertical-offset="0" max-vertical-offset="804">
           <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,12 +1113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4738806" vertical-offset="1404" max-vertical-offset="2346">
           <caret line="167" column="74" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
-          <folding>
-            <element signature="method#save_adverst#0;class#AdvertisingController#0" expanded="false" />
-            <element signature="method#get_all_adverst#0;class#AdvertisingController#0" expanded="false" />
-            <element signature="method#get_adverst#0;class#AdvertisingController#0" expanded="false" />
-            <element signature="method#createResizedCopy#0;class#AdvertisingController#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1132,11 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28109452" vertical-offset="148" max-vertical-offset="952">
           <caret line="43" column="87" selection-start-line="43" selection-start-column="87" selection-end-line="43" selection-end-column="87" />
-          <folding>
-            <element signature="method#registrationCorier#0;class#RegistrationController#0" expanded="false" />
-            <element signature="method#registrationClient#0;class#RegistrationController#0" expanded="false" />
-            <element signature="method#createResizedCopy#0;class#RegistrationController#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72512436" vertical-offset="80" max-vertical-offset="884">
           <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3553">
           <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1168,16 +1149,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42288557" vertical-offset="1632" max-vertical-offset="5151">
           <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
-          <folding>
-            <element signature="method#getAllAdverts#0;class#MyService#0" expanded="false" />
-            <element signature="method#getAdverts#0;class#MyService#0" expanded="false" />
-            <marker date="1586016000994" expanded="true" signature="-1:-1" placeholder="update Couri..." />
-            <marker date="1586016000994" expanded="true" signature="-1:-1" placeholder="update Clien..." />
-            <marker date="1586016000994" expanded="true" signature="-1:-1" placeholder="update Couri..." />
-            <marker date="1586016000994" expanded="true" signature="-1:-1" placeholder="update Clien..." />
-            <marker date="1586016000994" expanded="true" signature="-1:-1" placeholder="select * fro..CourierDB..." />
-            <marker date="1586016000994" expanded="true" signature="-1:-1" placeholder="select adv_i..ADV_COURIER_TB..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4800995" vertical-offset="488" max-vertical-offset="1292">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
