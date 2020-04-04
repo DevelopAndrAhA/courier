@@ -120,7 +120,7 @@ public class MyService {
 
 /*=======================LAST ID COURIER============================*/
     public long getLastContCourier(){
-        SQLQuery sqlQuery = session.getCurrentSession().createSQLQuery("select * from CourierDB  order by id desc limit 1");
+        SQLQuery sqlQuery = session.getCurrentSession().createSQLQuery("select * from CourierDB  order by id desc limit 1").addEntity(CourierDB.class);
         List list = sqlQuery.list();
         if(list!=null){
             if(list.size()!=0){
